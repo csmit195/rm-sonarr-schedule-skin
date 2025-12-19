@@ -7,7 +7,6 @@ function Initialize()
     local now = os.time()
     local future = now + (45 * 24 * 60 * 60)
     
-    -- Generate API URL
     local offset = (tonumber(SKIN:GetVariable('ShowYesterday')) == 0) and 43200 or 86400
     local startDate = os.date("!%Y-%m-%dT%H:%M:%SZ", now - offset)
     local endDate = os.date("!%Y-%m-%dT%H:%M:%SZ", future)
@@ -183,7 +182,7 @@ function UpdateFromLua()
         end
         
         currentY = currentY + 10 -- Gap between days
-        end -- End of skip check
+        end
     end
 
     SKIN:Bang('!SetVariable', 'BgHeight', currentY + 10)
