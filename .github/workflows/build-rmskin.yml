@@ -1,0 +1,37 @@
+name: Build RMSKIN Package
+
+on:
+  push:
+    tags:
+      - 'v*' # Triggers on tags like v1.0.3
+
+permissions:
+  contents: write # REQUIRED: Allows creating the release
+
+jobs:
+  build-n-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout this Repo
+        uses: actions/checkout@v4
+
+      - name: Fetch and Merge Lua Library
+        run: |
+          TARGET_FILE="Skins/Sonarr/SonarrParse.lua"
+          curl -o json.lua https://raw.githubusercontent.com/rxi/json.lua/master/json.lua
+          cat json.lua "$TARGET_FILE" > temp.lua && mv temp.lua "$TARGET_FILE"
+          rm json.lua
+
+      - name: Run Build action
+        id: builder
+        uses: 2bndy5/rmskin-action@v2.0.2
+        with:
+          version: ${{ github.ref_name }}
+
+      - name: Create Release and Upload
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: ${{ steps.builder.outputs.arc_name }}
+          generate_release_notes: true

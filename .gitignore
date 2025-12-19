@@ -1,0 +1,24 @@
+# Build artifacts
+*.rmskin
+
+# Node.js / npm
+node_modules/
+package-lock.json
+package.json
+npm-debug.log
+.npmrc
+
+pnpm-lock.yaml
+
+# Dev scripts
+scripts/
+!scripts/gen_meters.js
+
+# Editor/System
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+Thumbs.db
+.DS_Store
