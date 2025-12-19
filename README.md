@@ -1,23 +1,23 @@
 <div align="center">
 
-![Sonarr Calendar](assets/header.svg)
+![Sonarr Schedule](assets/header.svg)
 
 [![Latest Release](https://img.shields.io/github/v/release/csmit195/rm-sonarr-schedule-skin?style=flat-square&color=00b4ff)](https://github.com/csmit195/rm-sonarr-schedule-skin/releases)
 [![Downloads](https://img.shields.io/github/downloads/csmit195/rm-sonarr-schedule-skin/total?style=flat-square&color=blueviolet)](https://github.com/csmit195/rm-sonarr-schedule-skin/releases)
 [![Rainmeter](https://img.shields.io/badge/Rainmeter-4.5%2B-blue?style=flat-square)](https://www.rainmeter.net/)
 
-**A sleek, minimal calendar for your Sonarr episodes directly on your desktop.**
+**A sleek, minimal schedule for your Sonarr episodes directly on your desktop.**
 
 </div>
 
 ## Overview
-**Sonarr Calendar** is a lightweight Rainmeter skin that connects to your Sonarr server to display upcoming TV show episodes. It provides a quick glance at what’s airing today, tomorrow, and in the coming days, with status indicators to help you track your library.
+**Sonarr Schedule** is a lightweight Rainmeter skin that connects to your Sonarr server to display upcoming TV show episodes. It provides a quick glance at what’s airing today, tomorrow, and in the coming days, with status indicators to help you track your library.
 
 ## Preview
 ![Preview](assets/default.png)
 
 ## Features
-- **Dynamic Calendar**: Automatically groups episodes by day (Yesterday, Today, Tomorrow, etc.).
+- **Dynamic Schedule**: Automatically groups episodes by day (Yesterday, Today, Tomorrow, etc.).
 - **Status Indicators**: Color-coded dots show the state of each episode (Downloaded, Missing, or Unaired).
 - **Tooltips**: Hover over any episode to see its synopsis and full details.
 - **Customizable**: Easily adjust the skin width, number of days shown, and color scheme.
